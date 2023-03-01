@@ -4,6 +4,7 @@ Aplikacja służąca do sprawdzenia pogody w danej miejscowości oraz odpowiedni
 	-Python 3
 	-Django
 	-WeatherStack
+	-Microsoft Azure
 # Funkcje aplikacji
 	-Wyszukiwanie miejscowości za pomocą pola tekstowego
 	-Wyświetlanie aktualnych informacji o pogodzie w wyszukanej miejscowości
