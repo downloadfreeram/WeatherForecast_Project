@@ -3,7 +3,7 @@ Aplikacja służąca do sprawdzenia pogody w danej miejscowości oraz odpowiedni
 # Technologie użyte
 	-Python 3
 	-Django
-	-WeatherStack
+	-API do uzyskania informacji o pogodzie
 	-Usługa do "postawienia" aplikacji(np. Microsoft Azure, DigitalOcean)
 # Funkcje aplikacji
 	-Wyszukiwanie miejscowości za pomocą pola tekstowego
