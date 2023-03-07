@@ -13,6 +13,7 @@ Wprowadzenie nazwy miejscowości do pola tekstowego zwróci nam rezultat w skró
 	-Wyświetlanie danych historycznych
 	-Prognoza godzinowa, długoterminowa
 	-Udogodnienia dla użytkownika(np. zwiększanie, zmniejszanie czcionki, ustawienie ciemnego,jasnego motywu, zamiana jednostek temperatury, itd.)
+https://github.com/downloadfreeram/WeatherForecast_Project.git
       
         
 	
