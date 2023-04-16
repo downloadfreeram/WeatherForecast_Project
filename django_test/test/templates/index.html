@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body 
+        {
+            background-color:rgb(10, 9, 42);
+            color:white;
+            font-family:Helvetica;
+            font-weight:lighter;
+        }
+        #result 
+        {
+            width:10%;
+        }
+    </style>
+    <title>test</title>
+</head>
+<body>
+    <h1> test </h1>
+    <hr>
+    <h2>ąężćó</h2>
+    <hr>
+    <h3>Witaj {{ firstname }}!</h3>
+    <form action="/./" method="POST">{% csrf_token %}
+    <input type="text" placeholder="Enter the city" name="city"><input type="submit" name="itson" value="click">
+    </form>
+    <div id="result">{{ c }} {{name}}<br>{{ query }}</div>
+</body>
+</html>
