@@ -18,9 +18,8 @@ def index(request):
             return render(request, 'index.html',{})
         else:
             query = ""
-            #pogoda godzinna
             for i in range(1,25):
-                query += data['list'][i]['dt_txt']+" - "+str(round(data['list'][i]['main']['temp']-273.15,1))+"\n"
+                query += data['list'][i]['dt_txt']+" - "+str(round(data['list'][i]['main']['temp']-273.15,1))+" C"+"\n"
             name = ","+data["city"]["country"]
             return render(request, 'index.html',{"query":query,"c":city,"name":name})
     else:

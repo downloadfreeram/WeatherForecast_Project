@@ -12,9 +12,21 @@
             font-family:Helvetica;
             font-weight:lighter;
         }
+        #f 
+        {
+            border:2px solid white;
+            padding:20px;
+            width:20%;
+            margin:0 auto;
+            text-align:center;
+        }
         #result 
         {
-            width:10%;
+            padding:20px;
+            margin:0 auto;
+            width:15%;
+            text-align:center;
+            border:2px solid white;
         }
     </style>
     <title>test</title>
@@ -22,12 +34,12 @@
 <body>
     <h1> test </h1>
     <hr>
-    <h2>ąężćó</h2>
+    <h2>strona służąca testowaniu funkcji</h2>
     <hr>
-    <h3>Witaj {{ firstname }}!</h3>
-    <form action="/./" method="POST">{% csrf_token %}
-    <input type="text" placeholder="Enter the city" name="city"><input type="submit" name="itson" value="click">
+    <form action="/./" method="POST" id="f">{% csrf_token %}
+        <input type="text" placeholder="Enter the city" name="city"><input type="submit" name="itson" value="Click!">
     </form>
+    <br>
     <div id="result">{{ c }} {{name}}<br>{{ query }}</div>
 </body>
 </html>
