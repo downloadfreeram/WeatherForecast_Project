@@ -2,7 +2,9 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
 from django.views.decorators.csrf import csrf_exempt
+from tabulate import tabulate
 import requests
+
 
 
 def index(request):
@@ -17,11 +19,13 @@ def index(request):
             print("Error")
             return render(request, 'index.html',{})
         else:
-            query = ""
+            query = []
             for i in range(1,25):
-                query += data['list'][i]['dt_txt']+" - "+str(round(data['list'][i]['main']['temp']-273.15,1))+" C"+"\n"
+                # query += data['list'][i]['dt_txt']+" - "+str(round(data['list'][i]['main']['temp']-273.15,1))+" C"+"\n"
+                query.append([data['list'][i]['dt_txt'],str(round(data['list'][i]['main']['temp']-273.15,1))])
             name = ","+data["city"]["country"]
-            return render(request, 'index.html',{"query":query,"c":city,"name":name})
+            tab = tabulate(query,headers=['Date','Temperature'],tablefmt='html')
+            return render(request, 'index.html',{"query":tab,"c":city,"name":name})
     else:
         return render(request, 'index.html',{})
 

@@ -12,7 +12,7 @@
             font-family:Helvetica;
             font-weight:lighter;
         }
-        #f 
+        #f
         {
             border:2px solid white;
             padding:20px;
@@ -24,8 +24,11 @@
         {
             padding:20px;
             margin:0 auto;
-            width:15%;
+            width:20%;
             text-align:center;
+            border:2px solid white;
+        }
+        table {
             border:2px solid white;
         }
     </style>
@@ -36,10 +39,11 @@
     <hr>
     <h2>Strona służąca testowaniu funkcji</h2>
     <hr>
+    <hr>
     <form action="/./" method="POST" id="f">{% csrf_token %}
         <input type="text" placeholder="Enter the city" name="city"><input type="submit" name="itson" value="Click!">
     </form>
     <br>
-    <div id="result">{{ c }} {{name}}<br>{{ query }}</div>
+    <div id="result">{{ c }}{{query|safe}}{{name}}<br></div>
 </body>
 </html>
