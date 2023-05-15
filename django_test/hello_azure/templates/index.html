@@ -30,6 +30,10 @@
         }
         table {
             border:2px solid white;
+
+        }
+        td {
+            padding:20px;
         }
     </style>
     <title>test</title>
@@ -44,6 +48,6 @@
         <input type="text" placeholder="Enter the city" name="city"><input type="submit" name="itson" value="Click!">
     </form>
     <br>
-    <div id="result">{{ c }}{{query|safe}}{{name}}<br></div>
+    <div id="result">{{ c }}{{name}}{{query|safeu}}<br></div>
 </body>
 </html>
