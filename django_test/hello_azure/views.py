@@ -5,8 +5,6 @@ from django.views.decorators.csrf import csrf_exempt
 from tabulate import tabulate
 import requests
 
-
-
 def index(request):
     template = loader.get_template('index.html')
     if request.method == "POST":
@@ -22,9 +20,9 @@ def index(request):
             query = []
             for i in range(1,25):
                 # query += data['list'][i]['dt_txt']+" - "+str(round(data['list'][i]['main']['temp']-273.15,1))+" C"+"\n"
-                query.append([data['list'][i]['dt_txt'],str(round(data['list'][i]['main']['temp']-273.15,1))])
+                query.append([data['list'][i]['dt_txt'],data['list'][i]['weather'][0]['main'],str(round(data['list'][i]['main']['temp']-273.15,1))])
             name = ","+data["city"]["country"]
-            tab = tabulate(query,headers=['Date','Temperature'],tablefmt='html')
+            tab = tabulate(query,headers=['Date','Weather','Temperature'],tablefmt='html')
             return render(request, 'index.html',{"query":tab,"c":city,"name":name})
     else:
         return render(request, 'index.html',{})
