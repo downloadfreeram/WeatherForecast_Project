@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static 'style.css'%}">
+    <script async src="{%static 'scriptsJS.js'%}"></script>
+</head>
+<body>     
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+        <a class="navbar-brand" href="#">Welcome!</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="/index">Weather Forecast</a>
+            <a class="nav-item nav-link" href="/hisdata">Historical Forecast</a>
+          </div>
+        </div>
+      </nav>
+      <br>
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        Due to the limitations of the OpenWeatherAPI subscription, it is only possible to get weather up to one year back, for maximum range of one week
+      </div>   
+      <div id="section">
+        <form method ="POST">{% csrf_token %}        
+          <input type="text" placeholder="Enter the city" name="city" id="city_bar"><br>
+          <input type="text" placeholder="Enter the country code" name="code" id="code_bar" maxlength="3"><br>
+          <input type="date" placeholder="Choose the start date" name="start" id="start_bar"><br>
+          <input type="date" placeholder="Choose the end date" name="end" id="end_bar"><br>
+          <input class="btn btn-primary" type="submit" name="search" id="search_button" value="Search"><br>
+        </form>
+        <div id="lay"><img src="{%static 'CtoF.jpg'%}" class="iconF" onclick="changeCtoF()"> <img src="{% static 'themeIcon.svg' %}" onClick="changeTheme()" class="iconF"></div>
+      </div>
+      <div id="bar">{{query3|safe}}</div>
+      <div id="res">{{query2|safe}}</div>
+</body>
+</html>

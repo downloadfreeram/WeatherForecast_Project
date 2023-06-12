@@ -1,0 +1,87 @@
+body {
+    background-color:lightcyan;
+    color:black;
+    font-family:Helvetica;
+    font-weight:lighter;
+}
+#f {
+    padding:20px;
+    width:100%;
+    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+}
+#lay {
+    position:absolute;
+    left:90%;
+    top:2%;
+}
+.res {
+    width:80%;
+    height:auto;
+    display:flex;
+    flex-direction:row;
+    margin:10px auto;
+    border:2px solid black;
+}
+/* 20% */
+.dateBox, .tempBox, .humBox, .windBox, .presBox {
+    width:20%;
+    height:100%;
+    margin:auto 0;
+    text-align:center;
+}
+.time, .temperature, .weatherInfo,.humidity,.pressure {
+    height:100%;
+    width:25%;
+    background-color:turquoise; 
+    text-align:center;
+}
+.info {
+    display:flex;
+}
+#city_bar {
+    width:40%;
+    font-size:24px; 
+}
+#code_bar {
+    width:10%;
+    font-size:24px; 
+}
+#start_bar {
+    width:25%;
+    font-size:24px; 
+}
+#end_bar {
+    width:25%;
+    font-size:24px; 
+}
+#searchButton {
+    font-size:24px;
+}
+#mess {
+    position:absolute;
+    text-align:center;
+    top:50%;
+    font-size:40px;
+}
+.val {
+    white-space:nowrap;
+}
+.iconF {
+    height:25px;
+    width:25px;
+}
+#section {
+    text-align: center;
+}
+#bar {
+    width:80%;
+    display:flex;
+    margin:0 auto;
+}
+.txt {
+    width:16%;
+    margin:0 auto;
+}
