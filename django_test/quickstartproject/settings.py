@@ -15,7 +15,7 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-CSRF_TRUSTED_ORIGINS = ["https://weatherappproject.azurewebsites.net"]
+CSRF_TRUSTED_ORIGINS = ['https://weatherappproject.azurewebsites.net', 'https://www.weatherappproject.azurewebsites.net']
 
 
 # Quick-start development settings - unsuitable for production
