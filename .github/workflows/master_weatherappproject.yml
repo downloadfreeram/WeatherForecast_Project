@@ -33,3 +33,7 @@ jobs:
         app-name: 'weatherAppProject'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_946595d156f34165bd0f6b305933f80f }}
+        
+    - name: Azure Login
+      uses: Azure/login@v1
+
