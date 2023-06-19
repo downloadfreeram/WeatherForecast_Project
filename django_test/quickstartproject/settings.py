@@ -26,8 +26,11 @@ SECRET_KEY = '1234567890'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-CSRF_TRUSTED_ORIGINS = ['https://weatherappproject.azurewebsites.net']
 ALLOWED_HOSTS = ['https://weatherappproject.azurewebsites.net']
+CSRF_TRUSTED_ORIGINS = ['https://weatherappproject.azurewebsites.net']
+CORS_ORIGIN_WHITELIST = [
+    'https://weatherappproject.azurewebsites.net',
+]
 
 
 # Application definition
