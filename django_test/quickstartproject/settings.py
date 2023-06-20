@@ -24,9 +24,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '1234567890'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://weatherappproject.azurewebsites.net']
+CSRF_TRUSTED_ORIGINS = ['https://weatherappproject.azurewebsites.net']
+CORS_ORIGIN_WHITELIST = [
+    'https://weatherappproject.azurewebsites.net',
+]
 
 
 # Application definition
