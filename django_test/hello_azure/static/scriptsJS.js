@@ -4,6 +4,7 @@ function changeCtoF()
     variable = !variable;
     if(variable)
     {
+        alert("Zmieniono temperature na Celcius");
         let a = document.getElementsByClassName('val');
         for(let i=0;i<=a.length;i++)
         {
@@ -12,10 +13,10 @@ function changeCtoF()
             let cV = pV-273.15;
             a[i].innerText = String(cV.toFixed(1));
         }
-        document.getElementById("info").innerHTML="Currently showing temperature in Kelvin";
     }
     else
     {
+        alert("Zmieniono temperature na Kelvin");
         let a = document.getElementsByClassName('val');    
         for(let i=0;i<=a.length;i++)
         {
@@ -24,7 +25,6 @@ function changeCtoF()
             let cV = pV+273.15;
             a[i].innerText = String(cV.toFixed(2));
         }
-        document.getElementById("info").innerHTML="Currently showing temperature in Celcius";
     }
 }  
 function changeTheme(e) 
