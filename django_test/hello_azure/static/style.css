@@ -25,7 +25,6 @@ body {
     margin:10px auto;
     border:2px solid black;
 }
-/* 20% */
 .dateBox, .tempBox, .humBox, .windBox, .presBox {
     width:20%;
     height:100%;
